@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+/* Enable class-based dark mode (we toggle .dark on <html>) */
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: 255, 255, 255;
+  --foreground: 15, 23, 42;
+  --card: 248, 250, 252;
+  --card-border: 226, 232, 240;
+  
+  --primary: 124, 58, 237;      /* Violet 600 */
+  --secondary: 14, 116, 144;   /* Cyan 700 */
+  --accent: 79, 70, 229;       /* Indigo 600 */
+  
+  --glow-color: rgba(124, 58, 237, 0.15);
+  
+  scroll-behavior: smooth;
+}
+
+:root.dark {
+  --background: 8, 8, 12;
+  --foreground: 241, 245, 249;
+  --card: 15, 15, 25;
+  --card-border: 30, 30, 45;
+  
+  --primary: 167, 139, 250;    /* Violet 400 */
+  --secondary: 34, 211, 238;   /* Cyan 400 */
+  --accent: 129, 140, 248;     /* Indigo 400 */
+  
+  --glow-color: rgba(167, 139, 250, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--primary), 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--primary), 0.6);
+}
+
+/* Glassmorphism Styles */
+.glass {
+  background: rgba(var(--background), 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--card-border), 0.4);
+}
+
+.glass-navbar {
+  background: rgba(var(--background), 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(var(--card-border), 0.3);
+}
+
+/* Grids and backgrounds */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(var(--card-border), 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--card-border), 0.3) 1px, transparent 1px);
+}
+
+/* Custom Cursor Glow */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Dynamic Animation Utilities */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.15); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+/* Hide scrollbar default styles for simple clean layouts */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom inputs styling */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: rgba(var(--primary), 0.6);
+  box-shadow: 0 0 0 3px rgba(var(--primary), 0.15);
+}

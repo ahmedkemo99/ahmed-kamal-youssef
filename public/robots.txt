@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmedkamal-myprotfolio.vercel.app/sitemap.xml

@@ -187,7 +187,7 @@ export default function About() {
                 { label: 'Email',    value: 'a.kemo2362003@gmail.com'       },
                 { label: 'Phone',    value: '+20 102 413 0996'             },
                 { label: 'Status',   value: 'Open to Work'                  },
-                { label: 'Year',     value: '3rd Year Student'             },
+                { label: 'Year',     value: '23 years old'             },
               ].map(({ label, value }) => (
                 <div key={label} className="space-y-0.5">
                   <p className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">{label}</p>

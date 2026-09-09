@@ -18,7 +18,7 @@ import Services         from './components/Services';
 import Certifications   from './components/Certifications';
 import Contact          from './components/Contact';
 import Footer           from './components/Footer';
-
+import GraphicDesign    from './components/GraphicDesign';
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -52,6 +52,7 @@ export default function App() {
             <Skills />
             <Experience />
             <Projects />
+            <GraphicDesign />
             <Services />
             <Certifications />
             <Contact />

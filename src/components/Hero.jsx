@@ -8,6 +8,7 @@ import ProfileImage from "../assets/focus.jpg";
 const ROLES = [
   'Software Engineer',
   'Full Stack Developer',
+  'graphic Designer',
   'Embedded Systems Dev',
 ];
 

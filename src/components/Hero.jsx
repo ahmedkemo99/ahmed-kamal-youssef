@@ -49,7 +49,7 @@ function useTypingAnimation(words) {
 // Floating social links
 const SOCIALS = [
   { icon: GitHubIcon,   href: 'https://github.com/ahmedkamal88',                             label: 'GitHub'   },
-  { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ahmed-kamal-474670386/',          label: 'LinkedIn' },
+  { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ahmed-kamal-182814386/',          label: 'LinkedIn' },
   { icon: Mail,         href: 'mailto:a.kemo2362003@gmail.com',                              label: 'Email'    },
   { icon: MapPin,       href: 'https://maps.google.com/?q=Faisal,Giza,Egypt',               label: 'Location' },
 ];

@@ -83,7 +83,7 @@ export default function About() {
                     New Cairo Technological University (NCTU)
                   </p>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-3">
-                    3rd Year &bull; 2022 – Present
+                    4th Year &bull; 2022 – Present
                   </p>
                   <div className="p-4 rounded-2xl bg-slate-100/60 dark:bg-slate-900/60 border border-slate-200/30 dark:border-slate-800/40 space-y-1.5 text-xs">
                     <p className="flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300">
